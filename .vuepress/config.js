@@ -17,12 +17,7 @@ module.exports = {
       { text: '首页', link: '/', icon: 'reco-home' },
       { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
       { text: 'github', link: 'https://github.com/lby3123', icon: 'reco-github' },
-      { text: '关于',
-        icon: 'reco-message',
-        items: [
-          { text: 'GitHub', link: 'https://github.com/lby3123', icon: 'reco-github' }
-        ]
-      },
+      // { text: '关于', link: '/blogs/about', icon: 'reco-account' },
     ],
     type: 'blog',
     // 博客设置
@@ -36,18 +31,12 @@ module.exports = {
         text: '标签' // 默认 “标签”
       }
     },
-    friendLink: [
-      {
-        title: 'github',
-        link: 'https://github.com/lby3123'
-      },
-    ],
     logo: '/head.jpg',
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
     // 自动形成侧边导航
-    // sidebar: 'auto',
+    sidebar: 'auto',
     // 最后更新时间
     lastUpdated: 'Last Updated',
     // 作者
@@ -73,7 +62,7 @@ module.exports = {
         },
       ],
     }],
-    ["vuepress-plugin-auto-sidebar", {}]
+    // ["vuepress-plugin-auto-sidebar", {}]
   ],
   markdown: {
     lineNumbers: true
