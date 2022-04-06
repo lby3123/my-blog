@@ -93,6 +93,22 @@ module.exports = {
     //   appKey: '...', // your appKey
     // }
   },
+  plugins: [
+    [
+      '@vuepress-reco/vuepress-plugin-kan-ban-niang',{
+      theme: [
+        'miku', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'blackCat', 'z16'
+      ],
+      clean: false,
+      messages: {
+        welcome: '欢迎来到我的博客', home: '木白', theme: '木白博客', close: '你不喜欢我了吗？痴痴地望着你。'
+      },
+      messageStyle: { right: '68px', bottom: '290px' },
+      width: 250,
+      height: 320
+    }
+    ],
+  ],
   markdown: {
     lineNumbers: true
   }
