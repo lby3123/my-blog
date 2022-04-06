@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: vuepress-theme-reco
-tagline: A simple and beautiful vuepress blog theme.
+heroText: 木白
+tagline: 书上有路勤为径，学海无涯苦作舟。
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',

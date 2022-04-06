@@ -1,9 +1,14 @@
 module.exports = {
-  title: "vuepress-theme-reco",
-  description: 'A simple and beautiful vuepress blog theme .',
+  locales: {
+    '/': {
+      lang: 'zh-CN'
+    }
+  },
+  title: "木白",
+  description: '书上有路勤为径，学海无涯苦作舟。',
   dest: 'public',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    // ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
   ],
   theme: 'reco',
@@ -11,18 +16,19 @@ module.exports = {
     nav: [
       { text: '首页', link: '/', icon: 'reco-home' },
       { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
-      { text: 'Docs', 
+      /*{ text: 'Docs',
         icon: 'reco-message',
         items: [
           { text: 'vuepress-reco', link: '/docs/theme-reco/' }
         ]
-      },
-      { text: 'Contact', 
+      },*/
+      { text: 'github', link: 'https://github.com/lby3123', icon: 'reco-github' },
+      { text: '关于',
         icon: 'reco-message',
         items: [
           { text: 'GitHub', link: 'https://github.com/lby3123', icon: 'reco-github' }
         ]
-      }
+      },
     ],
     sidebar: {
       '/docs/theme-reco/': [
@@ -31,7 +37,7 @@ module.exports = {
         'plugin',
         'api'
       ]
-    },  
+    },
     type: 'blog',
     // 博客设置
     blogConfig: {
@@ -46,19 +52,11 @@ module.exports = {
     },
     friendLink: [
       {
-        title: '午后南杂',
-        desc: 'Enjoy when you can, and endure when you must.',
-        email: '1156743527@qq.com',
-        link: 'https://www.recoluan.com'
-      },
-      {
-        title: 'vuepress-theme-reco',
-        desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        link: 'https://vuepress-theme-reco.recoluan.com'
+        title: 'github',
+        link: 'https://github.com/lby3123'
       },
     ],
-    logo: '/logo.png',
+    logo: '/head.jpg',
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
@@ -69,11 +67,11 @@ module.exports = {
     // 作者
     author: '木白',
     // 作者头像
-    authorAvatar: '/avatar.png',
+    authorAvatar: '/head.jpg',
     // 备案号
-    record: 'xxxx',
+    // record: 'xxxx',
     // 项目开始时间
-    startYear: '2017'
+    startYear: '2021'
     /**
      * 密钥 (if your blog is private)
      */
@@ -94,20 +92,21 @@ module.exports = {
     // }
   },
   plugins: [
-    [
-      '@vuepress-reco/vuepress-plugin-kan-ban-niang',{
-      theme: [
-        'miku', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'blackCat', 'z16'
+    ['@vuepress-reco/vuepress-plugin-bulletin-popover', {
+      title: '公告',
+      body: [
+        {
+          type: 'title',
+          content: '欢迎加我的QQ',
+          style: 'text-aligin: center;',
+        },
+        {
+          type: 'text',
+          content: 'QQ：157620486',
+          style: 'text-align: center;'
+        },
       ],
-      clean: false,
-      messages: {
-        welcome: '欢迎来到我的博客', home: '木白', theme: '木白博客', close: '你不喜欢我了吗？痴痴地望着你。'
-      },
-      messageStyle: { right: '68px', bottom: '290px' },
-      width: 250,
-      height: 320
-    }
-    ],
+    }],
   ],
   markdown: {
     lineNumbers: true
